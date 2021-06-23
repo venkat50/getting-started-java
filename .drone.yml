@@ -3,7 +3,6 @@ name: default
 
 steps:
 - name: test
-  image: gradle:jdk10
-  commands: 
-  - gradle --stacktrace build
-  - gradle run
+  image: maven:3-jdk-10
+  commands:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
