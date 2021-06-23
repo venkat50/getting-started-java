@@ -4,6 +4,6 @@ name: default
 steps:
 - name: test
   image: gradle:jdk10
-  commands:
-  - gradle build
+  commands: 
+  - gradle --stacktrace build
   - gradle run
